@@ -39,4 +39,4 @@ jobs:
           semantic-release version
         env:
           # This is required to create a commit in the repo
-          GH_TOKEN: ${{secrets.PYGNSS_GITHUB_TOKEN}}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
