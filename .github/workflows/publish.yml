@@ -17,21 +17,15 @@ jobs:
       matrix:
         os: [ubuntu-latest]
     # Specifying a GitHub environment is optional, but strongly encouraged
-    environment: pypi
+    environment: 
+      name: pypi
+      url: https://pypi.org/p/pnt_datasets
     permissions:
       # IMPORTANT: this permission is mandatory for trusted publishing
       id-token: write
 
     steps:
 
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # To fetch the tags
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
       - name: PyPi publish
         uses: pypa/gh-action-pypi-publish@release/v1
+        
