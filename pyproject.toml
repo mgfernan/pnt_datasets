@@ -1,0 +1,56 @@
+[project]
+name = "pnt_datasets"
+version = "0.1.0"
+description = "Package with datasets to develop and test navigation algorithms"
+authors = [
+  { name = "Miquel Garcia-Fernandez", email = "miquel@mgfernan.com" }
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy",
+    "pandas >= 2.2",
+    "pyarrow >= 18.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest >= 8.3.4",
+  "pytest-env >= 1.1.5",
+  "pytest-mocha >= 0.4.0",
+  "flake8 >= 7.0.0",
+]
+release = [
+  "python-semantic-release >= 9.4.0",
+]
+
+[tool.semantic_release]
+version_variables = [
+    "pnt_datasets/__init__.py:__version__"
+]
+version_toml = [
+    "pyproject.toml:project.version"
+]
+tag_format = "{version}"
+
+[tool.semantic_release.branches.main]
+match = "(main)"
+prerelease = false
+
+[tool.semantic_release.changelog]
+exclude_commit_patterns = ["build", "ci", "doc", "chore", "test"]
+
+[tool.semantic_release.remote]
+type = "github"
+
+[build-system]
+requires = ["build", "setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pnt_datasets", "pnt_datasets.*"]
+
+[tool.setuptools.package-data]
+pnt_datasets = ["*.parquet"]
