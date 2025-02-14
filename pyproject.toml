@@ -1,6 +1,6 @@
 [project]
 name = "pnt_datasets"
-version = "0.1.0"
+version = "0.2.0"
 description = "Package with datasets to develop and test navigation algorithms"
 authors = [
   { name = "Miquel Garcia-Fernandez", email = "miquel@mgfernan.com" }
