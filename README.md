@@ -5,7 +5,7 @@ algorithms. The repositories contained here are
 
 ## IPIN 5G positioning
 
-This data has been extracted from the competition organized by the Indoor Position and Indoor Navigtaion conference[^ipin]. The competition[^ipin_competition] has various tracks that offer challenges in various positioning technologies. In particular, the 5G positioning track focuses on  ToA[^1] positioning and offsers measurements extracted from a network of nodes. The `dataset` contains the data from two editions of the competition (2022 and 2023) and each edition has several measurements `sessions`. Each session has:
+This data has been extracted from the competition organized by the Indoor Position and Indoor Navigtaion conference[^1]. The competition[^2] has various tracks that offer challenges in various positioning technologies. In particular, the 5G positioning track focuses on  ToA[^3] positioning and offsers measurements extracted from a network of nodes. The `dataset` contains the data from two editions of the competition (2022 and 2023) and each edition has several measurements `sessions`. Each session has:
 
 - Position of the nodes (anchor points)
 - Measurements from the receiver to each of the nodes
@@ -44,6 +44,6 @@ The `data_bundle` (`DataBundle`) is a `dataclass` with three members:
 - `reference_trajectory`, a series of timestamped positions with the true position of the receiver (this could be used to train your algorithm)
 
 
-[^1]: Time of Arrival
-[^ipin] [IPIN Conference](https://ipin-conference.org/)
-[^ipin_competition] https://competition.ipin-conference.org/
+[^1] [IPIN Conference](https://ipin-conference.org/)
+[^2] https://competition.ipin-conference.org/
+[^3]: Time of Arrival
