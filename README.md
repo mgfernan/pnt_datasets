@@ -44,6 +44,6 @@ The `data_bundle` (`DataBundle`) is a `dataclass` with three members:
 - `reference_trajectory`, a series of timestamped positions with the true position of the receiver (this could be used to train your algorithm)
 
 
-[^1] [IPIN Conference](https://ipin-conference.org/)
-[^2] https://competition.ipin-conference.org/
+[^1]: [IPIN Conference](https://ipin-conference.org/)
+[^2]: https://competition.ipin-conference.org/
 [^3]: Time of Arrival
