@@ -35,28 +35,6 @@ class DataBundle:
     reference_trajectory: pd.DataFrame
 
 
-def _reshape_measurement_dataframe(df: pd.DataFrame) -> pd.DataFrame:
-
-    value_vars = [name for name in df.columns if name.startswith('TOA ') or name.startswith('Rsrp ')]
-
-    df_melted = pd.melt(df,
-                       id_vars=TIMESTAMP_STR,
-                       value_vars=value_vars,
-                       var_name='variable',
-                       value_name='value')
-
-    df_melted[NODE_ID_STR] = df_melted['variable'].str.extract(r' (\d+) ')
-    df_melted['data_type'] = df_melted['variable'].str.split(' ').str[0]
-
-    df_reshaped = pd.pivot_table(df_melted, index=[TIMESTAMP_STR, NODE_ID_STR], columns='data_type', values='value')
-    df_reshaped = df_reshaped.reset_index()
-    df_reshaped[TOA_STR] = df_reshaped['TOA']
-    df_reshaped[RSRP_STR] = df_reshaped['Rsrp']
-    df_reshaped = df_reshaped[[TIMESTAMP_STR, NODE_ID_STR, TOA_STR, RSRP_STR]]
-
-    return df_reshaped
-
-
 def get_dataset_sessions(dataset: Dataset):
     """
     Returns the list of measurements sessions within the dataset
