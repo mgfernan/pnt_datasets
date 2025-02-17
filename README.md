@@ -13,7 +13,7 @@ This data has been extracted from the competition organized by the Indoor Positi
 
 This repository contains the data of the CSV files published by the competition. This format of the data has been homogenized so that is the same through all editions and has been stored in [Apache `parquet`](https://parquet.apache.org/) files, which can be access easily into Python `pandas` using the [`read_parquet`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_parquet.html) method:
 
-```{python}
+```python
 import pandas as pd
 
 # Load the Node data of the IPIN 2022 edition into a dataframe directly from the parquet
@@ -28,7 +28,7 @@ pip install pnt_datasets
 
 Then you can access a `session` dataset with the following commands:
 
-```{python}
+```python
 from pnt_datasets import ipin
 
 edition = ipin.Dataset.IPIN_2022_T8
