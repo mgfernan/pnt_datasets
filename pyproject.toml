@@ -54,3 +54,18 @@ include = ["pnt_datasets", "pnt_datasets.*"]
 
 [tool.setuptools.package-data]
 pnt_datasets = ["ipin/**/*.parquet"]
+
+
+classifiers = [
+    Development Status :: 5 - Production/Stable,
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Testing"
+    ]
+
+[project.urls]
+"Homepage" = "https://github.com/mgfernan/pnt_datasets/"
