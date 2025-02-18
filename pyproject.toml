@@ -53,4 +53,4 @@ build-backend = "setuptools.build_meta"
 include = ["pnt_datasets", "pnt_datasets.*"]
 
 [tool.setuptools.package-data]
-pnt_datasets = ["*.parquet"]
+pnt_datasets = ["ipin/**/*.parquet"]
