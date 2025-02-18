@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.2.1 (2025-02-18)
+
+### Bug Fixes
+
+- **ipin**: Correct path for ipin data package
+  ([`0992da0`](https://github.com/mgfernan/pnt_datasets/commit/0992da058ec38dd33e81bc6fccd5a9b815baadc8))
+
+Also, added test folder and included a basic test for IPIN dataset
+
+
 ## v0.2.0 (2025-02-14)
 
 ### Features
