@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.2.2 (2025-02-18)
+
+### Bug Fixes
+
+- Force Node field to be an integer in measurements
+  ([`b469ec8`](https://github.com/mgfernan/pnt_datasets/commit/b469ec8cf2d09e4cdcdf206f8e9a9e4a28f1b046))
+
+
 ## v0.2.1 (2025-02-18)
 
 ### Bug Fixes
